@@ -33,6 +33,7 @@ print("The details of real estate on the no of bedroom")
 df1=newdf.groupby(['beds']).size()
 print(df1)
 print(df1.plot.pie(label='noofbeds',figsize=(11, 6)))
+st.pyplot()
 #display no of real estate available based on type of building 
 df2=df.groupby(['type']).size()
 print("Grouped data", df2)
