@@ -14,12 +14,12 @@ import streamlit as st
 st.title("Assignment-Day4")
 st.header("ICFOSS")
 # Subheader
-st.subheader("machine ")
+st.subheader("Machine Learning")
 # Text
-st.text("ML BATCH")
+st.text("ML BATCH7")
 
 #create a dataframe by reading the provided csv file
-df=pd.read_csv(r"C:/Users/Suman/Sacramentorealestatetransactions.csv")
+df=pd.read_csv("Sacramentorealestatetransactions.csv")
 #to print the no of rows and columns in the dataset
 print(df.shape)
 print(df.describe())
