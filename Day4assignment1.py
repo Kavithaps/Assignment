@@ -17,29 +17,34 @@ st.header("ICFOSS")
 st.subheader("Machine Learning")
 # Text
 st.text("ML BATCH7")
+st.balloons()
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 #create a dataframe by reading the provided csv file
 df=pd.read_csv("Sacramentorealestatetransactions.csv")
-df.head(10)
-#to print the no of rows and columns in the dataset
+tips=df.head(10)
+st.text ("The no of rows and columns in the dataset")
 df.shape
-df.describe())
-#to verify head and tail of the dataset.
+df.describe()
+st.text ("verify head and tail of the dataset")
 df.head(10)
 df.tail(5)
-#created a new dataframe with first 4 columns
+st.text ("created a new dataframe with first 4 columns")
 newdf=df[['street', 'city', 'zip', 'state', 'beds']].copy()
 newdf
-print("The details of real estate on the no of bedroom")
+st.text ("The details of real estate on the no of bedroom")
 df1=newdf.groupby(['beds']).size()
 df1
-df1.plot.pie(label='noofbeds',figsize=(11, 6))
-#st.pyplot()
-#display no of real estate available based on type of building 
+st.subheader ("Pie Chart")
+ 
+b=df1.plot.pie(label='noofbeds',figsize=(11, 6))
+b.plot(kind='pie')
+print("Display no of real estate available based on type of building") 
 df2=df.groupby(['type']).size()
-#sorting real estate transaction data in the ascending order of price
+df2
+st.text ("sorting real estate transaction data in the ascending order of price")
 df.to_numpy()
-print("The maximum price")
+st.text ("The maximum price")
 df['price'].max()
 
 
