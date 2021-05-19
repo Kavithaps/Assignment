@@ -1,0 +1,1 @@
+web: sh setup.sh && streamlit run day4assignment1.py
