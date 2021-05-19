@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run day4assignment1.py
+web:sh setup.sh && streamlit run Day4assignment1.py
