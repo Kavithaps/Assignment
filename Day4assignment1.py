@@ -20,26 +20,26 @@ st.text("ML BATCH7")
 
 #create a dataframe by reading the provided csv file
 df=pd.read_csv("Sacramentorealestatetransactions.csv")
+df.head(10)
 #to print the no of rows and columns in the dataset
-print(df.shape)
-print(df.describe())
+df.shape
+df.describe())
 #to verify head and tail of the dataset.
-print(df.head(10))
-print(df.tail(5))
+df.head(10)
+df.tail(5)
 #created a new dataframe with first 4 columns
 newdf=df[['street', 'city', 'zip', 'state', 'beds']].copy()
-print(newdf)
+newdf
 print("The details of real estate on the no of bedroom")
 df1=newdf.groupby(['beds']).size()
-print(df1)
-print(df1.plot.pie(label='noofbeds',figsize=(11, 6)))
+df1
+df1.plot.pie(label='noofbeds',figsize=(11, 6))
 #st.pyplot()
 #display no of real estate available based on type of building 
 df2=df.groupby(['type']).size()
-print("Grouped data", df2)
 #sorting real estate transaction data in the ascending order of price
-print(df.to_numpy())
+df.to_numpy()
 print("The maximum price")
-print(df['price'].max())
+df['price'].max()
 
 
